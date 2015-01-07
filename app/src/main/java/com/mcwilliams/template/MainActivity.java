@@ -36,7 +36,6 @@ public class MainActivity extends ActionBarActivity {
     RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
     RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
     protected DrawerLayout Drawer;                                  // Declaring DrawerLayout
-    public RelativeLayout frameLayout;
 
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
@@ -55,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
 
         mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
 
-        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE, this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE, this, Drawer);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
         // And passing the titles,icons,header view name, header view email,
         // and header view profile picture
 
@@ -65,7 +64,6 @@ public class MainActivity extends ActionBarActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
 
-        frameLayout = (RelativeLayout) findViewById(R.id.frame_layout);
         Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
         mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.open_drawer,R.string.close_drawer){
 
@@ -85,6 +83,7 @@ public class MainActivity extends ActionBarActivity {
 
 
         }; // Drawer Toggle Object Made
+
         Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
         mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
 

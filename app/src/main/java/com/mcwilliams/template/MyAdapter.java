@@ -2,6 +2,7 @@ package com.mcwilliams.template;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,6 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String email;       //String Resource for header view email
 
     private Context context;
+    private DrawerLayout mDrawer;
 
 
     // Creating a ViewHolder which extends the RecyclerView View Holder
@@ -66,7 +68,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-    MyAdapter(String Titles[],int Icons[],String Name,String Email, int Profile, Context mContext){ // MyAdapter Constructor with titles and icons parameter
+    MyAdapter(String Titles[],int Icons[],String Name,String Email, int Profile, Context mContext, DrawerLayout drawer){ // MyAdapter Constructor with titles and icons parameter
         // titles, icons, name, email, profile pic are passed from the main activity as we
         mNavTitles = Titles;
         context = mContext;
@@ -74,6 +76,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         name = Name;
         email = Email;
         profile = Profile;
+        mDrawer = drawer;
         //here we assign those passed values to the values we declared here
         //in adapter
 
@@ -132,9 +135,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                     switch (v.getTag().toString()){
                         case "Home":
                             Intent goHome = new Intent(context, Home.class);
+                            goHome.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                             context.startActivity(goHome);
                             break;
                         case "Weekly Ad":
+                            Intent goWeeklyAd = new Intent(context, WeeklyAd.class);
+                            goWeeklyAd.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            context.startActivity(goWeeklyAd);
                             break;
                         case "Digital Coupons":
                             break;
@@ -146,7 +153,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
         else{
 
-            holder.profile.setImageResource(profile);           // Similarly we set the resources for header view
+            holder.profile.setImageResource(profile);
             holder.Name.setText(name);
             holder.email.setText(email);
 
