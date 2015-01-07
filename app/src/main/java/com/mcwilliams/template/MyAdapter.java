@@ -132,6 +132,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                     switch (v.getTag().toString()){
                         case "Home":
                             Intent goHome = new Intent(context, Home.class);
+                            context.startActivity(goHome);
                             break;
                         case "Weekly Ad":
                             break;
