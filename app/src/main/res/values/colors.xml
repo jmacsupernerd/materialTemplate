@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="HEBred">#DC291E</color>
+    <color name="TextBlue">#057DC2</color>
+    <color name="Black">#000000</color>
+    <color name="lightBlack">#64000000</color>
+    <color name="GreenCategoryBackground">#3FA63D</color>
+    <color name="White">#ffffff</color>
+    <color name="Transparent_White">#32ffffff</color>
+    <color name="HoloDark">#ff4c4c4c</color>
+    <color name="HEBredHighlight">#C0DC291E</color>
+    <color name="HEBredPage">#77DC291E</color>
+    <color name="Sidebar_gray">#676767</color>
+    <color name="Sidebar_gray_active">#303030</color>
+    <color name="List_row_on_touch">#ff676767</color>
+    <color name="side_bar_gray">#343434</color>
+    <color name="loading_more_grey">#ff999999</color>
+    <color name="trans_sidebar_gray">#80343434</color>
+    <color name="transparent_white">#80FFFFFF</color>
+    <color name="dialog_message_text_dark">#FFFFFF</color>
+    <color name="dialog_title_text_dark">#FFFFFF</color>
+    <color name="dialog_title_separator_dark">#DC291E</color>
+    <color name="dialog_button_text_dark">#FFFFFF</color>
+    <color name="dialog_button_normal_dark">@android:color/transparent</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_button_pressed_dark">#99F8A500</color>
+    <!-- 60 % opacity -->
+    <color name="dialog_button_focused_dark">#4CF8A500</color>
+    <!-- 30 % opacity -->
+    <color name="dialog_button_separator_dark">#12FFFFFF</color>
+    <!-- 7% opacity -->
+    <color name="background_dark">#C35817</color>
+    <color name="digital_coupons_orange_header">#F9A43A</color>
+    <color name="digital_coupons_orange_header_dark">#F17A1E</color>
+    <color name="TextGreen">#1DC622</color>
+    <color name="OrangeStatus">#F5AC63</color>
+    <color name="Transparent_gray">#80303030</color>
+    <color name="lighter_gray">#CBCBCB</color>
+</resources>
