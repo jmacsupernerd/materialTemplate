@@ -1,6 +1,8 @@
 package com.mcwilliams.template;
 
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -37,7 +39,10 @@ public class MainActivity extends ActionBarActivity {
     RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
     protected DrawerLayout Drawer;                                  // Declaring DrawerLayout
 
-    ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
+    ActionBarDrawerToggle mDrawerToggle;
+                 // Declaring Action Bar Drawer Toggle
+
+    protected FrameLayout container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,8 @@ public class MainActivity extends ActionBarActivity {
      */
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+
+        container = (FrameLayout) findViewById(R.id.content_view);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
 
